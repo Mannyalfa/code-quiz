@@ -29,20 +29,30 @@
         <h3>Good Luck!</h3>
     </div>
 </section>
-        <!-- quiz questions and answers-->
-<div id="quiz-content" class="quiz-content">
-    <h2 id="quiz-question" class="quiz-question"></h2>
-    <ul id="quiz-answers" class="quiz-answers"></ul>
-    <div id="selection-response" class="response-hidden"></div>
-</div>
-
- <!-- set up high scores-->
- <section></section>
-
-    <!--High score and game restart will go here-->
-    <section></section>
-      
-      <script src="../assets/js/script.js"></script>
+        <!--questions and answers-->
+        <div id="quiz-content" class="quiz-content">
+          <h2 id="quiz-question" class="quiz-question"></h2>
+          <ul id="quiz-answers" class="quiz-answers"></ul>
+          <div id="selection-response" class="response-hidden"></div>
+      </div>
+      <!-- set up high scores-->
+      <section id="quiz-end" class="quiz-end hidden">
+          <h2>Game Over!</h2>
+          <p>Your score is: <span id="final-score"></span> </p>
+          <div class="initial-input">
+              <label for="initials">Enter your initials: </label>
+              <input type="text" id="initials" name="initials">
+              <button type="submit" id="submit-button">Submit</button>
+          </div>
+      </section>
+      <!-- Saved high score, clear saved scores and restart game -->
+      <section id="show-score" class="high-score hidden">
+          <h2>High score</h2>
+          <input type="text" id="show-high-score" name="show-high-score">
+          <button type="reset" id="new-game">New Game</button>
+          <button type="reset" id="clear-score">Clear Scores</button>
+      </section>
+        <script src="C:/Users/Owner/Documents/UCF/challenges/code-quiz/assets/js/script.js"></script>
 </body>      
 </html>
 
