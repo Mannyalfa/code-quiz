@@ -16,3 +16,8 @@ WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
+
+This is my introduction to JSON and my first integration of different API's into one multifunctional page.
+Accordingly, this is also the first time I built a full webpage (utilizing HTML, CSS and JavaScript) where form was secondary to function.
+
+Repository URL: https://github.com/Mannyalfa/code-quiz
