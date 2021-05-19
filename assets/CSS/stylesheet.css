@@ -5,14 +5,14 @@
 /* displaying timer and previous high score */
 
 body{
-  background-image: url("C:/Users/Owner/Documents/UCF/challenges/code-quiz/assets/images/cubes.jpg");
+  background-image: url("../images/cubes.jpg");
 }
 
 header {
   display: flex;
   justify-content: space-between;
   font-size: 13px;
-  margin: 0 5px;
+  margin: 0 5px;s
   padding: 0 5px;
 }
 
@@ -69,9 +69,9 @@ header h1 {
   list-style: none;
 }
 
-/* feedback message */
+/* Response message */
 
-.feedback {
+.responce {
   font-size: 45px;
   font-weight: bolder;
   font-style: italic;

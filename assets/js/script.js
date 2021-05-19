@@ -1,6 +1,14 @@
+// Event handlers for starting game, restarting and clearing scores
+var startBtn = document.querySelector("#start-button");
+var newGame = document.querySelector("#new-game");
+var clearScoreBtn = document.querySelector("#clear-score");
+startBtn.addEventListener("click", countDown);
+newGame.addEventListener("click", restartGame);
+clearScoreBtn.addEventListener("click", clearLocalStorage)
+
 var score = 0;
 var savedScores = [];
-// object array for quiz questions, multiple choices for answers, and actual answer
+// Game content: object array for quiz questions, multiple choices for answers, and actual answers
 var questions = [{
     question: "What are the CSS properties that are used to add space around sections of content?",
     choices: [
@@ -92,7 +100,7 @@ function buildQuiz() {
     OpenQuestion.classList.remove("hidden");
     var quizQuestion = questions[currentQuestionIndex].question;
     OpenQuestion.textContent = quizQuestion;
-    // use for loop to create a list of answers with clickable buttons for selected question
+// use for loop to create a list of answers with clickable buttons for selected question
     var quizChoices = questions[currentQuestionIndex].choices;
     for (var i = 0; i < quizChoices.length; i++) {
         var quizChoice = quizChoices[i];
@@ -110,7 +118,7 @@ function buildQuiz() {
         quizAnswers.appendChild(listitem);
     }
 }
-// check if user entered right or wrong answer, display brief feedback message
+// Responses to answers
 function choiceClicked(event) {
     var Selection = event.target;
     if (Selection) {
@@ -120,11 +128,13 @@ function choiceClicked(event) {
         if (buttonChosen === answerChoice) {
             selectionResponse.textContent = "CORRECT!";
             selectionResponse.style.color ='green';
+            document.getElementById('correct-sound').play()
             score += 5;
             // if wrong subtract time
         } else if (buttonChosen != answerChoice) {
             selectionResponse.textContent = "WRONG!";
             selectionResponse.style.color ='red';
+            document.getElementById('wrong-sound').play()
             timer -= 10;
             //if time has expired,end quiz 
             if (timer <= 0) {
@@ -132,17 +142,17 @@ function choiceClicked(event) {
             }
             timeLeft.textContent = timer;
         } 
-        // Feedback message for 0.5 seconds unless timer has reached 0
+        // Responce message for 0.5 seconds unless timer has reached 0
         if (timer > 0) {
             selectionResponse.removeAttribute( "hidden");
-            selectionResponse.setAttribute("class", "feedback")
-            setTimeout(feedBackTimeout, 500);
+            selectionResponse.setAttribute("class", "responce")
+            setTimeout(responseTimeout, 500);
         }
     }
 }
 var selectionResponse = document.getElementById("selection-response");
 
-function feedBackTimeout() {
+function responseTimeout() {
     selectionResponse.setAttribute("class", "hidden");
     getNextQuestion();
 }
@@ -166,6 +176,8 @@ function getNextQuestion() {
 function gameOver() {
     timer = 0;
     timeLeft.textContent = "Game Over!";
+    document.getElementById('end-sound').play()
+
     // clear timer, last question displayed, prepare to end quiz
     clearInterval(countDownTimer);
     clearAnswers();
@@ -197,7 +209,7 @@ var playerInitials = document.getElementById("initials");
 
 function getInitials() {
     if (!playerInitials || playerInitials.value === "") {
-        alert("Enter your initials, letters only");
+        alert("Enter your initials");
         return;
     } else {
         var HighScore = localStorage.getItem(scoreName);
@@ -216,6 +228,7 @@ function getInitials() {
         }
     }
     showResults();
+    document.getElementById('cheer').play()
 }
 // initials screen hidden and results retrieved from local storage are displayed 
 var TopScore = document.getElementById("show-score");
@@ -244,10 +257,7 @@ function restartGame() {
     currentQuestionIndex = 0;
     score = 0;
 }
-// event handlers for start, go back(start game over) and clear all scores from storage
-var startBtn = document.querySelector("#start-button");
-var newGame = document.querySelector("#new-game");
-var clearScoreBtn = document.querySelector("#clear-score");
-startBtn.addEventListener("click", countDown);
-newGame.addEventListener("click", restartGame);
-clearScoreBtn.addEventListener("click", clearLocalStorage)
+
+
+
+
