@@ -3,7 +3,7 @@
 
 Class Code UCF-VIRT-BO-FSF-PT-04-2021-U-B
 
-JavaScript Project: Create a multiple-choice quiz application utiliZing HTML, CSS and JavaScript to satisfy the following conditions:
+JavaScript Project: Create a multiple-choice quiz application utilizing HTML, CSS and JavaScript to satisfy the following conditions:
 
 AS a coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
