@@ -52,7 +52,7 @@ var questions = [{
 
 
 {
-    question: "Here's a hard one: which iof these would be a PALINDROME STRING?",
+    question: "Here's a hard one: which of these would be a PALINDROME STRING?",
     choices: [
         "Hello World!" ,
         "rotator",
