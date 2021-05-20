@@ -241,6 +241,7 @@ function showResults() {
     HighScoreArray = JSON.parse(HighScore);
     if (HighScoreArray) {
         showTopScore.value = "1. " + HighScoreArray[0].name + ":" + HighScoreArray[0].newScore;
+        document.getElementById('cheer').play();
     }
 }
 // clear scores function

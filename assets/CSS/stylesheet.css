@@ -1,141 +1,141 @@
 * {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: purple;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: purple;
 }
-/* displaying timer and previous high score */
+  /* displaying timer and previous high score */
 
 body{
-  background-image: url("C:/Users/Owner/Documents/UCF/challenges/code-quiz/assets/images/cubes.jpg");
+    background-image: url("../images/cubes.jpg");
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  margin: 0 5px;
-  padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 0 5px;
+    padding: 0 5px;
 }
 
 header h1 {
-  font-weight: 100;
+    font-weight: 100;
 }
 
-/* start page */
+  /* start page */
 
 .title{
-  text-align: center;
+    text-align: center;
 }
 
 .title h3 {
-  font-size: 32px;
+    font-size: 32px;
 }
 
 .container {
-  text-align: center;
+    text-align: center;
 }
 
 .start {
-  visibility: visible;
+    visibility: visible;
 }
 
 .instructions {
-  text-align: center;
-  font-size: 22px;
-  background-color: seashell;
-  border-style: solid;
-  border-color: purple;
+    text-align: center;
+    font-size: 22px;
+    background-color: seashell;
+    border-style: solid;
+    border-color: purple;
 }
 
 /* questions and answers */
 
 .quiz-content {
-  justify-content: center;
-  margin: 75px;
-  text-align: center;
+    justify-content: center;
+    margin: 75px;
+    text-align: center;
 }
 
 .quiz-question {
-  font-size: 38px;
-  width: 50%;
-  margin: auto;
+    font-size: 38px;
+    width: 50%;
+    margin: auto;
 }
 
 .quiz-answers {
-  width: 50%;
-  margin: auto;
+    width: 50%;
+    margin: auto;
 }
 
 .list-choice {
-  list-style: none;
+    list-style: none;
 }
 
-/* feedback message */
+  /* feedback message */
 
 .feedback {
-  font-size: 45px;
-  font-weight: bolder;
-  font-style: italic;
-  color:blueviolet;
-  width: 50%;
-  margin: auto;
+    font-size: 45px;
+    font-weight: bolder;
+    font-style: italic;
+    color:blueviolet;
+    width: 50%;
+    margin: auto;
 }
 
-/* end of quiz record score */
+  /* end of quiz record score */
 
 .quiz-end p {
-  display: block;
-  text-align: center;
-  font-size: 34px;
+    display: block;
+    text-align: center;
+    font-size: 34px;
 }
 
 .initial-input {
-  font-size: 28px;
-  text-align: center;
+    font-size: 28px;
+    text-align: center;
 }
 
 .quiz-end button {
-  display: block;
-  margin: 15px auto;
-  padding: 10px 40px;
+    display: block;
+    margin: 15px auto;
+    padding: 10px 40px;
 }
 
-/* display high score */
+  /* display high score */
 
 .high-score {
-  text-align: center;
+    text-align: center;
 }
 
-/* style used by multiple classes */
+  /* style used by multiple classes */
 
 .hidden {
-  display: none;
+    display: none;
 }
 
-/* global styles */
+  /* global styles */
 
 h2 {
-  font-size: 44px;
-  text-align: center;
+    font-size: 44px;
+    text-align: center;
 }
 
 button {
-  padding: 10px;
-  margin: 24px;
-  cursor: pointer;
-  font-size: 24px;
-  background-color: purple;
-  color: white;
+    padding: 10px;
+    margin: 24px;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: purple;
+    color: white;
 }
 
 button:hover {
-  background-color: palevioletred;
+    background-color: palevioletred;
 }
 
 input[type="text"i] {
-  padding: 10px 25px;
-  margin: 12px 10px;
-  background-color: white;
-  color: purple;
-  font-size: 20px;
-  width: 10%;
+    padding: 10px 25px;
+    margin: 12px 10px;
+    background-color: white;
+    color: purple;
+    font-size: 20px;
+    width: 10%;
 }
