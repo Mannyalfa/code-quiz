@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/CSS/stylesheet.css">
+    <title>Coding Quiz</title>
+  </head>
+  <body>
+    <!--High score and timer goes here-->
+    <header>
+      <h1>High Score: <span id="view-high-score">0</span></h1>
+      <h1>Time Remaining: <span id="timer">0</span></h1>
+    </header>
+    <!-- set up start page-->
+    <section class="start-page" id="start-page">
+      <div class="header">
+          <h2>Coding Quiz</h2>
+          <h3>Test Your Coding Knowledge!</h3>
+      </div>
+      <div class="container">
+          <button id="start-button" class="start-button">Start Quiz</button>
+      </div>
+      <div class="instructions">
+          <p>Try to answer as many code-related within the time limit.</p>
+          <p>Incorrect answers will penalize your score/time by 10 seconds.</p>
+          <p>Record your high score at the end of the quiz</p>
+          <h3>Good Luck!</h3>
+        </div>
+      </section>
+        <!--Set up audio-->
+        <div id="sound-effects">
+          <audio id="start"> 
+            <source src="./assets/sounds/pop.mp3" />
+          </audio> 
+          <audio id="correct-sound"> 
+            <source src="./assets/sounds/ding.mp3" />
+          </audio> 
+          <audio id="wrong-sound"> 
+            <source src="./assets/sounds/buzz.mp3" /> 
+          </audio>
+          <audio id="end-sound"> 
+            <source src="./assets/sounds/done.mp3" />
+          </audio>
+          <audio id="cheer"> 
+            <source src="./assets/sounds/cheer.mp3" />
+          </audio>    
+        </div>
+        <!--questions and answers-->
+        <div id="quiz-content" class="quiz-content">
+          <h2 id="quiz-question" class="quiz-question"></h2>
+          <ul id="quiz-answers" class="quiz-answers"></ul>
+          <div id="selection-response" class="response-hidden"></div>
+        </div>
+        <!-- set up high scores-->
+      <section id="quiz-end" class="quiz-end hidden">
+          <h2>Game Over!</h2>
+          <p>Your score is: <span id="final-score"></span> </p>
+          <div class="initial-input">
+              <label for="initials">Enter your initials: </label>
+              <input type="text" id="initials" name="initials">
+              <button type="submit" id="submit-button">Submit</button>
+          </div>
+      </section>
+      <!-- Saved high score, clear saved scores and restart game -->
+      <section id="show-score" class="high-score hidden">
+          <h2>High score</h2>
+          <input type="text" id="show-high-score" name="show-high-score">
+          <button type="reset" id="new-game">New Game</button>
+          <button type="reset" id="clear-score">Clear Scores</button>
+      </section>
+        <script src="./assets/js/script.js"></script>
+  </body>      
+</html>
+
